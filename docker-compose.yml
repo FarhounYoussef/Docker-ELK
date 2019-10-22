@@ -50,3 +50,10 @@ services:
         hard: -1
     ports:
       - 9200:9200
+  curator:
+    hostname: curator
+    build:
+      context: curator
+      dockerfile: Dockerfile
+    links:
+      - elasticsearch
